@@ -8,6 +8,7 @@ Below you'll find information about performing common tasks. The most recent ver
 
 ## Table of Contents
 
+* [Installation](#installation)
 * [Updating to New Releases](#updating-to-new-releases)
 * [Available Scripts](#available-scripts)
   * [npm commit](#npm-commit)
@@ -31,6 +32,13 @@ Below you'll find information about performing common tasks. The most recent ver
   * [Networking](#networking)
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
+
+## Installation
+1. Clone this repo
+1. Install [Yarn](https://yarnpkg.com/en/)
+1. Run `yarn` in Project Repository
+1. Run `react-native link react-native-contacts`. _[React Native Contacts](https://github.com/rt2zz/react-native-contacts)_
+1. Run `yarn link`. This should link React Native Vector Icons
 
 ## Updating to New Releases
 

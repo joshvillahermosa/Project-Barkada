@@ -18,7 +18,7 @@
     "start": "react-native-scripts start",
     "prepush": "yarn test:ci",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "test:ci": "node node_modules/jest/bin/jest.js"
+    "test:ci": "node node_modules/jest/bin/jest.js --coverage"
   },
   "jest": {
     "preset": "jest-expo"

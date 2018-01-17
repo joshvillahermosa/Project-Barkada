@@ -38,7 +38,8 @@ Below you'll find information about performing common tasks. The most recent ver
 1. Install [Yarn](https://yarnpkg.com/en/)
 1. Run `yarn` in Project Repository
 1. Run `react-native link react-native-contacts`. _[React Native Contacts](https://github.com/rt2zz/react-native-contacts)_
-1. Run `yarn link`. This should link React Native Vector Icons
+1. Run `yarn link react-native link react-native-vector-icons`. This should link React [Native Vector Icons](https://react-native-training.github.io/react-native-elements/Installation/default_installation/)
+1. (Android) Plug in a Android Device with USB Debgging Enabled. Run `yarn run android`. If the build app appears on your device, then you have successfully installed dev app.
 
 ## Updating to New Releases
 

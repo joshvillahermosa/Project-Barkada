@@ -62,3 +62,6 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+# React Native Vector Icons
+android/app/src/main/assets/fonts

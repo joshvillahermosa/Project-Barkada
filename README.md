@@ -13,8 +13,11 @@ Below you'll find information about performing common tasks. The most recent ver
 * [Available Scripts](#available-scripts)
   * [npm commit](#npm-commit)
   * [npm start](#npm-start)
-  * [npm test](#npm-test)
+  * [npm run build](#npm-run-build)
+  * [npm run test:watch](#npm-run-test:watch)
+  * [npm run test:ci](#npm-run-test:ci)
   * [npm run ios](#npm-run-ios)
+  * [npm run prepush](#npm-run-prepush)
   * [npm run android](#npm-run-android)
   * [npm run eject](#npm-run-eject)
 * [Writing and Running Tests](#writing-and-running-tests)
@@ -34,6 +37,7 @@ Below you'll find information about performing common tasks. The most recent ver
   * [QR Code does not scan](#qr-code-does-not-scan)
 
 ## Installation
+1. Follow the installation instrcutions for [React Native](https://facebook.github.io/react-native/docs/getting-started.html). Use **Building Projects with React Native Code**.
 1. Clone this repo
 1. Install [Yarn](https://yarnpkg.com/en/)
 1. Run `yarn` in Project Repository
@@ -70,9 +74,23 @@ npm start -- --reset-cache
 yarn start -- --reset-cache
 ```
 
-#### `npm test`
+#### `npm run build`
 
-Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
+Runs a build using `./gradlew assembleRelease` to build a APK. 
+
+Runs the [jest](https://github.com/facebook/jest) test runner on your tests via watch.
+
+#### `npm run test:watch`
+
+Runs the [jest](https://github.com/facebook/jest) test runner on your tests via watch.
+
+#### `npm run test:ci`
+
+Runs the [jest](https://github.com/facebook/jest) test runner on your tests, create a report and run a build.
+
+#### `npm run prepush`
+
+[Husky](https://github.com/typicode/husky) command that runs a CI test before git push.
 
 #### `npm run ios`
 

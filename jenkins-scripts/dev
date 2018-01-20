@@ -1,3 +1,5 @@
+// NOTE: Currently I am evaluating if we need a CD Process for Jenkins. This is a incomplete script.
+
 node {
     sh 'cd ..'
 
@@ -11,18 +13,18 @@ node {
             sh 'npm run test'
         }
 
-        stage('Build') {
-            sh 'npm run build'
-        }
+        // stage('SKIPPED Build') {
+            // sh 'npm run build'
+        // }
     }
     
-    stage('@TODO Archive Build') {
+    stage('Archive') {
         archiveArtifacts 'coverage/**/*.*'
         // archiveArtifacts 'dist/**/*.*'
         publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'coverage/lcov-report', reportFiles: 'index.html', reportName: 'Coverage', reportTitles: ''])
     }
 
-    stage('@TODO Upload to S3') {
+    // stage('@TODO Upload to S3') {
         
-    }
+    // }
 }

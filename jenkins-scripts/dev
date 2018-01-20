@@ -19,7 +19,7 @@ node {
     stage('@TODO Archive Build') {
         archiveArtifacts 'coverage/**/*.*'
         // archiveArtifacts 'dist/**/*.*'
-        publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, // reportDir: 'coverage/lcov-report', reportFiles: 'index.html', reportName: 'Coverage', reportTitles: ''])
+        publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'coverage/lcov-report', reportFiles: 'index.html', reportName: 'Coverage', reportTitles: ''])
     }
 
     stage('@TODO Upload to S3') {

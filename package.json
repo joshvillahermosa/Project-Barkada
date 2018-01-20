@@ -16,8 +16,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "prepush": "yarn test:ci",
+    "test": "node node_modules/jest/bin/jest.js --coverage",
     "test:watch": "node node_modules/jest/bin/jest.js --watch",
-    "test:ci": "node node_modules/jest/bin/jest.js --coverage && yarn build"
+    "test:ci": "yarn test && yarn build"
   },
   "jest": {
     "preset": "jest-expo"

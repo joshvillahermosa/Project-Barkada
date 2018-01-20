@@ -11,8 +11,8 @@ node {
             sh 'npm run test'
         }
 
-        stage('@TODO Build') {
-            
+        stage('Build') {
+            sh 'npm run build'
         }
     }
     

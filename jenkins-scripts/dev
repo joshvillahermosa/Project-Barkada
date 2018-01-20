@@ -1,0 +1,30 @@
+// NOTE: Currently I am evaluating if we need a CD Process for Jenkins. This is a incomplete script.
+
+node {
+    sh 'cd ..'
+
+    nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', nvmIoJsOrgMirror: 'https://iojs.org/dist', nvmNodeJsOrgMirror: 'https://nodejs.org/dist', version: '8.8.1') {
+        stage('Install') {
+            checkout scm
+            sh 'npm install'
+        }
+
+        stage('Test') {
+            sh 'npm run test'
+        }
+
+        // stage('SKIPPED Build') {
+            // sh 'npm run build'
+        // }
+    }
+    
+    stage('Archive') {
+        archiveArtifacts 'coverage/**/*.*'
+        // archiveArtifacts 'dist/**/*.*'
+        publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'coverage/lcov-report', reportFiles: 'index.html', reportName: 'Coverage', reportTitles: ''])
+    }
+
+    // stage('@TODO Upload to S3') {
+        
+    // }
+}

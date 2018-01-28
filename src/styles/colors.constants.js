@@ -4,5 +4,6 @@
  * @todo Define Color schema
  */
 export default {
+  AMBER: '#ffbd00',
   RUBY: '#e91e63'
 }
